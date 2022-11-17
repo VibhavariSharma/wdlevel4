@@ -19,20 +19,17 @@ const todoList = () => {
     new Date(new Date().setDate(dateToday.getDate() + 1))
   );
   const overdue = () => {
-    // Write the date check condition here and return the array of overdue items accordingly.
-    const arr = all.filter((person) => person.dueDate < today);
+    const arr = all.filter((items) => items.dueDate < today);
     return arr;
   };
 
   const dueToday = () => {
-    // Write the date check condition here and return the array of todo items that are due today accordingly.
-    const arr = all.filter((person) => person.dueDate === today);
+    const arr = all.filter((items) => items.dueDate === today);
     return arr;
   };
 
   const dueLater = () => {
-    // Write the date check condition here and return the array of todo items that are due later accordingly.
-    const arr = all.filter((person) => person.dueDate > today);
+    const arr = all.filter((items) => items.dueDate > today);
 
     return arr;
   };
